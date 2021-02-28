@@ -19,8 +19,8 @@
 
         <mapping class="ru.job4j.tasks.model.cars.MarkaCar" />
         <mapping class="ru.job4j.tasks.model.cars.ModelCar" />
-<!--        <mapping class="ru.job4j.tasks.model.lazyinitialization.MarkaCar" />-->
-<!--        <mapping class="ru.job4j.tasks.model.lazyinitialization.ModelCar" />-->
+        <mapping class="ru.job4j.tasks.model.lazyinitialization.MarkCar" />
+        <mapping class="ru.job4j.tasks.model.lazyinitialization.ModelCars" />
         <mapping class="ru.job4j.tasks.model.book.Author" />
         <mapping class="ru.job4j.tasks.model.book.Book" />
     </session-factory>
