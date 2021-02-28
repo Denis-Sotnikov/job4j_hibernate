@@ -1,32 +1,33 @@
-package ru.job4j.todolist.model.cars;
+package ru.job4j.tasks.model.book;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "model_car")
-public class ModelCar {
+@Table(name = "authors")
+public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
 
-    public static ModelCar of(String name) {
-        ModelCar model = new ModelCar();
-        model.name = name;
-        return model;
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private List<Book> books = new ArrayList<>();
+
+    public Author() {
     }
 
-    public ModelCar() {
-    }
-
-    public ModelCar(int id) {
-        this.id = id;
-    }
-
-    public ModelCar(int id, String name) {
+    public Author(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    static Author of(String name) {
+        Author author = new Author();
+        author.setName(name);
+        return author;
     }
 
     public int getId() {
@@ -45,6 +46,14 @@ public class ModelCar {
         this.name = name;
     }
 
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -53,9 +62,9 @@ public class ModelCar {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        ModelCar modelCar = (ModelCar) o;
-        return id == modelCar.id
-                && Objects.equals(name, modelCar.name);
+        Author author = (Author) o;
+        return id == author.id
+                && Objects.equals(name, author.name);
     }
 
     @Override
@@ -65,7 +74,7 @@ public class ModelCar {
 
     @Override
     public String toString() {
-        return "ModelCar{"
+        return "Author{"
                 + "id=" + id
                 + ", name='" + name
                 + '\''

@@ -1,4 +1,4 @@
-package ru.job4j.todolist.model.cars;
+package ru.job4j.tasks.model.cars;
 
 import javax.persistence.*;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package ru.job4j.todolist.model.cars;
+package ru.job4j.tasks.model.cars;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

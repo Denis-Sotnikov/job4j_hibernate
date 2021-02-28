@@ -17,11 +17,11 @@
         <property name="format_sql">true</property>
         <property name="use_sql_comments">true</property>
 
-        <mapping class="ru.job4j.todolist.model.cars.MarkaCar" />
-        <mapping class="ru.job4j.todolist.model.cars.ModelCar" />
-<!--        <mapping class="ru.job4j.todolist.model.lazyinitialization.MarkaCar" />-->
-<!--        <mapping class="ru.job4j.todolist.model.lazyinitialization.ModelCar" />-->
-<!--        <mapping class="ru.job4j.todolist.model.book.Author" />-->
-<!--        <mapping class="ru.job4j.todolist.model.book.Book" />-->
+        <mapping class="ru.job4j.tasks.model.cars.MarkaCar" />
+        <mapping class="ru.job4j.tasks.model.cars.ModelCar" />
+<!--        <mapping class="ru.job4j.tasks.model.lazyinitialization.MarkaCar" />-->
+<!--        <mapping class="ru.job4j.tasks.model.lazyinitialization.ModelCar" />-->
+        <mapping class="ru.job4j.tasks.model.book.Author" />
+        <mapping class="ru.job4j.tasks.model.book.Book" />
     </session-factory>
 </hibernate-configuration>
