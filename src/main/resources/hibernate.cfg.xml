@@ -23,5 +23,8 @@
         <mapping class="ru.job4j.tasks.model.lazyinitialization.ModelCars" />
         <mapping class="ru.job4j.tasks.model.book.Author" />
         <mapping class="ru.job4j.tasks.model.book.Book" />
+        <mapping class="ru.job4j.tasks.model.modelandconnect.Car" />
+        <mapping class="ru.job4j.tasks.model.modelandconnect.Driver" />
+        <mapping class="ru.job4j.tasks.model.modelandconnect.Engine" />
     </session-factory>
 </hibernate-configuration>
