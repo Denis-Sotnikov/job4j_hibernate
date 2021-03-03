@@ -26,5 +26,6 @@
         <mapping class="ru.job4j.tasks.model.modelandconnect.Car" />
         <mapping class="ru.job4j.tasks.model.modelandconnect.Driver" />
         <mapping class="ru.job4j.tasks.model.modelandconnect.Engine" />
+        <mapping class="ru.job4j.tasks.model.hql.Candidate" />
     </session-factory>
 </hibernate-configuration>
