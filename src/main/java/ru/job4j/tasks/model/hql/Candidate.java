@@ -13,11 +13,16 @@ public class Candidate {
     private int experience;
     private int salary;
 
-    public static Candidate of(String name, int experience, int salary) {
+    @OneToOne
+    @JoinColumn(name = "baseVacancies_id", foreignKey = @ForeignKey(name = "BASEVACANCIES_ID_FK"))
+    private BaseVacancies baseVacancies;
+
+    public static Candidate of(String name, int experience, int salary, BaseVacancies baseVacancies) {
         Candidate candidate = new Candidate();
         candidate.name = name;
         candidate.experience = experience;
         candidate.salary = salary;
+        candidate.baseVacancies = baseVacancies;
         return candidate;
     }
 
@@ -88,10 +93,9 @@ public class Candidate {
         return "Candidate{"
                 + "id=" + id
                 + ", name='" + name
-                + '\''
-                + ", experience="
-                + experience + ", salary="
-                + salary
+                + '\'' + ", experience=" + experience
+                + ", salary=" + salary
+                + ", baseVacancies=" + baseVacancies
                 + '}';
     }
 }
